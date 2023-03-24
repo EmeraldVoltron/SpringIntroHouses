@@ -8,13 +8,24 @@
 
 <form>
 <table>
+<h2> Houses: </h2>
+
 <tr th:each="currentHouse : ${house}" >
+	<td> <p>House Id:</p> </td>
 	<td th:text="${currentHouse.id}" />
-	<td th:text="${currentHouse.numOfBeds}"> />
+	<td> <p>| Realtor: </p> </td>
+	<td th:text="${currentHouse.sellerCompanyName}"  />
+	<td> <p>| # of beds: </p> </td>
+	<td th:text="${currentHouse.numOfBeds}" />
+	<td> <p>| # of baths:</p> </td>
 	<td th:text="${currentHouse.numOfBaths}" />
+	<td> <p>| Address:</p> </td>
 	<td th:text="${currentHouse.address.street}" />
+	<td> <p>,</p> </td>
 	<td th:text="${currentHouse.address.city}" />
+	<td> <p>,</p> </td>
 	<td th:text="${currentHouse.address.state}" />
+	<td> <p>| Options: </p> </td>
 	<td><a th:href="@{/edit/{id}(id=${currentHouse.id})}">Edit</a></td>
 	<td><a th:href="@{/delete/{id}(id=${currentHouse.id})}">Delete</a></td>
 </tr>
