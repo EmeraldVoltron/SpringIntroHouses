@@ -12,7 +12,7 @@ import realEstate.beans.House;
  * @author abbyb
  *
  */
-@Repository
+//@Repository
 public interface HouseRepository extends JpaRepository<House, Long> {
 	
 }
